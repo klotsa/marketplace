@@ -1,18 +1,17 @@
 $(document).ready(function() {
-  $("form#appointment").submit(function(event) {
+  $("form#order").submit(function(event) {
 
     var nameInput = $("input#name").val();
-    var descriptionInput = $("input#description").val();
-    var dateInput =  $("input#date").val();
-    var timeBeginInput = $("input#timeBegin").val()
-    var timeEndInput = $("input#timeEnd").val();
+    var addressInput = $("input#address").val();
+    var teamInput =  $("input#team").val();
+    var sizeInput = $("input#sizeInput").val()
 
+    $("#receipt").show();
 
-    $(".appName").text(nameInput);
-    $(".appDescription").text(descriptionInput);
-    $(".appDate").text(dateInput);
-    $(".appStart").text(timeBeginInput);
-    $(".appEnd").text(timeEndInput);
+    $(".name").text(nameInput);
+    $(".address").text(addressInput);
+    $(".team").text(teamInput);
+    $(".size").text(sizeInput);
 
     event.preventDefault();
   });
